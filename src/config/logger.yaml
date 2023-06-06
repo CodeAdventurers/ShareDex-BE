@@ -1,0 +1,16 @@
+level: info
+encoding: console
+outputPaths:
+  - stdout
+  - logs/server.log
+errorOutputPaths:
+  - stderr
+  - logs/error.log
+initialFields:
+  serviceName: ShareDex
+encoderConfig:
+  messageKey: message
+  levelKey: level
+  levelEncoder: lowercase
+  timeKey: time
+  timeEncoder: iso8601
