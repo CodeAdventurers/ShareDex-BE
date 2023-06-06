@@ -19,7 +19,7 @@ var dbManager *DBManager
 var once sync.Once
 
 func newDBManager() {
-	dsn := "root:123456@tcp(127.0.0.1:3306)/huiyi-mall?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:123456@tcp(127.0.0.1:3306)/ShareDex?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.New(mysql.Config{
 		DSN:                       dsn,   // DSN data source name
 		DisableDatetimePrecision:  true,  // 禁用 datetime 精度，MySQL 5.6 之前的数据库不支持

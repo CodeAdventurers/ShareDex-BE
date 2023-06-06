@@ -1,6 +1,7 @@
 package routers
 
 import (
+	"ShareDex-BE/src/data_model/api_model"
 	"ShareDex-BE/src/handler"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -12,14 +13,14 @@ type UserRouter struct{}
 var userRouters = []RouterInfo{
 	{
 		// 获取用户信息
-		Method: http.MethodGet, Path: "/user_service/hui", Handler: handler.GetUserInfo,
-		//ReqIn: api_models.UserIn{}, RespOut: api_models.UserOut{}, // 方便快速知道请求入参和出参
+		Method: http.MethodGet, Path: "/user", Handler: handler.GetUserInfo,
+		ReqIn: api_model.UserIn{}, RespOut: api_model.UserOut{}, // 方便快速知道请求入参和出参
 	},
 
 	{
 		// 注册用户信息
-		Method: http.MethodGet, Path: "/user_service/register", Handler: handler.GetUserInfo,
-		//ReqIn: api_models.UserIn{}, RespOut: api_models.UserOut{}, // 方便快速知道请求入参和出参
+		Method: http.MethodGet, Path: "/user/register", Handler: handler.GetUserInfo,
+		ReqIn: api_model.UserIn{}, RespOut: api_model.UserOut{}, // 方便快速知道请求入参和出参
 	},
 }
 

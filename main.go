@@ -18,10 +18,9 @@ func InitSetup() {
 
 	dao.InitRedis() // 初始化Redis
 
-	// 日志
-
 	// ...
 
+	global.Logger.Info("InitSetup Success")
 }
 
 func InitMiddlewares(app *gin.Engine) {

@@ -32,6 +32,7 @@ func ZapLogger() gin.HandlerFunc {
 		statusCode := c.Writer.Status()
 
 		// 记录请求详情
+		// 看情况是否记录
 		global.Logger.Info(fmt.Sprintf("[%s]", constant.ProjectName),
 			zap.String("time", end.Format(time.DateTime)),
 			zap.Int("status", statusCode),
